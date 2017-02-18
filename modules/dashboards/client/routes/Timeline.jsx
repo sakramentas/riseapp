@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import CurrentLoans from '../components/CurrentLoans'
+import SuggestedLoans from '../components/SuggestedLoans'
 
 class Timeline extends React.Component {
   constructor(props) {
@@ -9,8 +11,12 @@ class Timeline extends React.Component {
   }
 
   render() {
-    <CurrentLoans />
-    <SuggestedLoans />
+    <div>
+      <span>Good Morning</span>
+      di
+      <CurrentLoans />
+      <SuggestedLoans />
+    </div>
   }
 }
 

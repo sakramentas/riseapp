@@ -10,7 +10,9 @@ class CurrentLoans extends React.Component {
   }
 
   render() {
-    <Circle percent="10" strokeWidth="4" strokeColor="#D3D3D3" />
+    const openedLoans = this.state.loans.map(obj => {
+      <Circle percent="10" strokeWidth="4" strokeColor="#D3D3D3" />
+    })
   }
 }
 
