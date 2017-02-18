@@ -1,0 +1,26 @@
+.headerWrap {
+  position: relative;
+  height: 500px;
+  overflow: hidden; }
+
+.headerCon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10% 0 0 0;
+  text-align: center; }
+  .headerCon .headerLogo {
+    display: inline-block;
+    width: 150px; }
+  .headerCon .headerTitle h1 {
+    padding: 0;
+    font-family: 'zona_probold', Helvetica, sans-serif;
+    color: #fff;
+    font-size: 80px; }
+  .headerCon .headerText p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200; }
+
+/*# sourceMappingURL=header.css.map */
