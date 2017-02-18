@@ -9,6 +9,7 @@ var mongoose = require('mongoose'),
   validator = require('validator'),
   generatePassword = require('generate-password'),
   owasp = require('owasp-password-strength-test');
+const capitalize = require('capitalize');
 
 /**
  * A Validation function for local strategy properties
@@ -54,9 +55,6 @@ var UserSchema = new Schema({
   },
   username: {
     type: String,
-    unique: 'Username already exists',
-    required: 'Please fill in a username',
-    lowercase: true,
     trim: true
   },
   password: {
@@ -109,6 +107,10 @@ UserSchema.pre('save', function (next) {
     this.password = this.hashPassword(this.password);
   }
 
+  if (this.firstName && this.lastName && (this.isModified('firstName') || this.isModified('lastName'))) {
+    this.username = `${capitalize(this.firstName)} ${capitalize(this.lastName[0])}`;
+  }
+
   next();
 });
 
@@ -132,7 +134,7 @@ UserSchema.pre('validate', function (next) {
  */
 UserSchema.methods.hashPassword = function (password) {
   if (this.salt && password) {
-    return crypto.pbkdf2Sync(password, new Buffer(this.salt, 'base64'), 10000, 64).toString('base64');
+    return crypto.pbkdf2Sync(password, new Buffer(this.salt, 'base64'), 10000, 64, 'sha1').toString('base64');
   } else {
     return password;
   }
@@ -177,7 +179,7 @@ UserSchema.statics.generateRandomPassphrase = function () {
     var password = '';
     var repeatingCharacters = new RegExp('(.)\\1{2,}', 'g');
 
-    // iterate until the we have a valid passphrase. 
+    // iterate until the we have a valid passphrase.
     // NOTE: Should rarely iterate more than once, but we need this to ensure no repeating characters are present.
     while (password.length < 20 || repeatingCharacters.test(password)) {
       // build the random password
