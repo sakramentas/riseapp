@@ -9,12 +9,12 @@
 
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('dashboards', {
+      .state('dashboard', {
         abstract: true,
         url: '/dashboards',
         template: '<ui-view/>'
       })
-      .state('dashboards.list', {
+      .state('dashboard.list', {
         url: '',
         templateUrl: 'modules/dashboards/client/views/list-dashboards.client.view.html',
         controller: 'DashboardsListController',
@@ -23,7 +23,7 @@
           pageTitle: 'Dashboards List'
         }
       })
-      .state('dashboards.create', {
+      .state('dashboard.create', {
         url: '/create',
         templateUrl: 'modules/dashboards/client/views/form-dashboard.client.view.html',
         controller: 'DashboardsController',
@@ -36,7 +36,7 @@
           pageTitle: 'Dashboards Create'
         }
       })
-      .state('dashboards.edit', {
+      .state('dashboard.edit', {
         url: '/:dashboardId/edit',
         templateUrl: 'modules/dashboards/client/views/form-dashboard.client.view.html',
         controller: 'DashboardsController',
@@ -49,7 +49,7 @@
           pageTitle: 'Edit Dashboard {{ dashboardResolve.name }}'
         }
       })
-      .state('dashboards.view', {
+      .state('dashboard.view', {
         url: '/:dashboardId',
         templateUrl: 'modules/dashboards/client/views/view-dashboard.client.view.html',
         controller: 'DashboardsController',
