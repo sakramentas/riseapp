@@ -65,6 +65,9 @@ module.exports = {
       }
     }
   },
+  bluebank: {
+    key: 'e6fa826a9946437e9f213997dfffeaaa'
+  },
   livereload: true,
   seedDB: process.env.MONGO_SEED || false
 };
