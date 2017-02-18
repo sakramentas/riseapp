@@ -100,7 +100,7 @@ module.exports = function (grunt) {
     babel: {
         options: {
             sourceMap: true,
-            presets: ['babel-preset-es2015', 'react'],
+            presets: ['babel-preset-stage-0', 'babel-preset-es2015', 'react'],
             // ext: '.react.js'
         },
         dist: {
