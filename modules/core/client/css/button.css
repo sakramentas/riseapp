@@ -1,0 +1,31 @@
+.signBtnCon {
+  width: 30%;
+  margin: auto;
+  display: block;
+  min-height: 90px; }
+
+.signBtn {
+  width: 48%;
+  padding: 10px 0;
+  float: left;
+  border-radius: 3px;
+  background: #0299E3;
+  color: #fff;
+  margin: 10px 1%;
+  border: 1px solid #0299E3; }
+  .signBtn.linkedInBtn {
+    background: #007bb5;
+    border-color: #007bb5;
+    color: #fff;
+    display: block; }
+  .signBtn.facebookBtn {
+    background: #3b5998;
+    border-color: #3b5998;
+    color: #fff;
+    display: block; }
+  .signBtn:hover {
+    background: #0299E3;
+    border-color: #0299E3;
+    color: #fff; }
+
+/*# sourceMappingURL=button.css.map */
