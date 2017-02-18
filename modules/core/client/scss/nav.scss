@@ -10,17 +10,14 @@
   }
 }
 
-.nav .open > a:hover, .nav .open > a:focus {
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background: transparent;
   border-color:transparent;
 }
 
 .navbar-nav {
   > li {
-    &.open a:focus {
-      background: transparent !important;
-      border:none !important;
-    }
+
     padding: 0 10px;
     a {
       padding: 7px;
