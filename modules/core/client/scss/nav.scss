@@ -1,4 +1,47 @@
 
 .navbar-fixed-top {
-  
+  padding: 30px 5%;
+}
+
+.navbar-brand {
+  img {
+    width: 50px;
+    margin-top: -20px;
+  }
+}
+
+.nav .open > a:hover, .nav .open > a:focus {
+  background: transparent;
+  border-color:transparent;
+}
+
+.navbar-nav {
+  > li {
+    &.open a:focus {
+      background: transparent !important;
+      border:none !important;
+    }
+    padding: 0 10px;
+    a {
+      padding: 7px;
+      font-weight: 200;
+      font-size: 16px;
+      border:1px solid transparent;
+
+      &.primary-btn {
+        background: #0299E3;
+        color: #fff;
+        padding: 7px 15px;
+        border-radius: 5px;
+        border:1px solid #0299E3;
+        -webkit-transition: all 500ms ease-out;
+        -moz-transition: all 500ms ease-out;
+        -o-transition: all 500ms ease-out;
+        transition: all 100ms ease-out;
+      }
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
 }

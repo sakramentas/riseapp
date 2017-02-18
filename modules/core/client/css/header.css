@@ -2,6 +2,15 @@
   position: relative;
   height: 500px;
   overflow: hidden; }
+  .headerWrap .headerDark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 72, 97, 0.2); }
+  .headerWrap.auth-wrap {
+    height: 100%; }
 
 .headerCon {
   position: absolute;
@@ -21,6 +30,9 @@
   .headerCon .headerText p {
     color: #fff;
     font-size: 20px;
+    font-weight: 200; }
+  .headerCon h3 {
+    color: #fff;
     font-weight: 200; }
 
 /*# sourceMappingURL=header.css.map */
