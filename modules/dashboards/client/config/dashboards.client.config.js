@@ -1,32 +1,27 @@
-(function () {
-  'use strict';
+'use strict';
 
-  angular
-    .module('dashboards')
-    .run(menuConfig);
-
-  menuConfig.$inject = ['menuService'];
-
-  function menuConfig(menuService) {
-    // Set top bar menu items
-    menuService.addMenuItem('topbar', {
-      title: 'Dashboards',
-      state: 'dashboards',
+// Configuring the Transactions module
+angular.module('dashboards').run(['Menus',
+  function (Menus) {
+    // Add the dashboard dropdown item
+    Menus.addMenuItem('topbar', {
+      title: 'Transactions',
+      state: 'dashboard',
       type: 'dropdown',
       roles: ['*']
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'dashboards', {
-      title: 'List Dashboards',
-      state: 'dashboards.list'
+    Menus.addSubMenuItem('topbar', 'dashboard', {
+      title: 'List Transactions',
+      state: 'dashboard.list'
     });
 
     // Add the dropdown create item
-    menuService.addSubMenuItem('topbar', 'dashboards', {
-      title: 'Create Dashboard',
-      state: 'dashboards.create',
+    Menus.addSubMenuItem('topbar', 'dashboard', {
+      title: 'Create Transaction',
+      state: 'dashboard.create',
       roles: ['user']
     });
   }
-}());
+]);
