@@ -33,6 +33,7 @@ module.exports = {
       'modules/core/client/app/config.js',
       'modules/core/client/app/init.js',
       'modules/*/client/*.js',
+      'modules/core/client/compiled.react.js',
       'modules/*/client/**/*.js'
     ],
     react: ['modules/*/client/jsx/**/*.js', 'modules/*/client/**/*.jsx'],

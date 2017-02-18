@@ -1,18 +1,27 @@
 import React from 'react';
-import { Circle } from 'rc-progress';
+import {Circle} from 'rc-progress';
 
 class CurrentLoans extends React.Component {
-  constructor(props) {
-    super(props)
-    State = {
-      loans: props.user.openedloans,
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  //   State = {
+  //     loans: props.user.openedloans,
+  //   }
+  // }
 
   render() {
-    const openedLoans = this.state.loans.map(obj => {
-      <Circle percent="10" strokeWidth="4" strokeColor="#D3D3D3" />
-    })
+    return (
+      <div className="container">
+        <div className="row text-center">
+          <span className="col-sm-12">Current Loans</span>
+          <div className="row">
+            <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" className="col-sm-4" />
+            <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" className="col-sm-4" />
+            <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" className="col-sm-4" />
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
