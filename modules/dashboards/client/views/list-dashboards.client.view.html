@@ -2,7 +2,7 @@
   <div class="page-header">
     <h1>Dashboards</h1>
   </div>
-  <div class="list-group">
+  <div class="list-group" id="react-render">
     <a ng-repeat="dashboard in vm.dashboards"
        ui-sref="dashboards.view({ dashboardId: dashboard._id })"
        class="list-group-item">

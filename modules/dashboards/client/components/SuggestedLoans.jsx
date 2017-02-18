@@ -14,15 +14,17 @@ import React from 'react';
 class SuggestedLoans extends React.Component {
   constructor(props) {
     super(props)
-    State = {
-      loans: props.user.loans,
-    }
+    // State = {
+    //   loans: props.user.loans,
+    // }
   }
 
   render() {
-    <div>
-      <span>Suggested Loans</span>
-    </div>
+    return (
+      <div>
+        <span>Suggested Loans</span>
+      </div>
+    )
   }
 }
 
