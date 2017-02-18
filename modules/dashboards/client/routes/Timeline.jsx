@@ -8,7 +8,7 @@ class Timeline extends React.Component {
     // }
   }
 
-  return() {
+  render() {
     <CurrentLoans />
     <SuggestedLoans />
   }
