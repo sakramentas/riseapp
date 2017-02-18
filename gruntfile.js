@@ -53,7 +53,7 @@ module.exports = function (grunt) {
       },
       clientJSX: {
         files: defaultAssets.client.react,
-        tasks: ['babel:dist'],
+        tasks: ['browserify'],
         options: {
           livereload: false
         }
@@ -97,17 +97,15 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       }
     },
-    babel: {
+    browserify: {
+      dist: {
         options: {
-            sourceMap: true,
-            presets: ['babel-preset-stage-0', 'babel-preset-es2015', 'react'],
-            // ext: '.react.js'
+          sourceMap: true,
+           transform: [['babelify', {presets: ['es2015', 'react']}]]
         },
-        dist: {
-            files: {
-                'modules/core/client/compiled.react.js': defaultAssets.client.react
-            }
-        }
+        src: defaultAssets.client.react,
+        dest: 'modules/core/client/compiled.react.js',
+      }
     },
     jshint: {
       all: {

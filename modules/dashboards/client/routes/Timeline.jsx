@@ -1,6 +1,6 @@
 import React from 'react'
-import CurrentLoans from '../components/CurrentLoans'
-import SuggestedLoans from '../components/SuggestedLoans'
+import CurrentLoans from '../components/CurrentLoans.jsx'
+import SuggestedLoans from '../components/SuggestedLoans.jsx'
 
 class Timeline extends React.Component {
   constructor(props) {
