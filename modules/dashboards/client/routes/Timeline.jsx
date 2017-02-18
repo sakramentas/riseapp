@@ -19,11 +19,13 @@ class Timeline extends React.Component {
   render() {
     return (
       <div className="main-container" style={mainContainer}>
-        <div className="row container-top">
-          <h2 className="title">Good Morning</h2>
+        <div className="row container-top" style={{height:'270px'}}>
+          <h2 className="title text-center" style={ titleStyle }>Good Morning</h2>
+          <div className="image text-center">
+            <img src="https://avatars.io/twitter/sakramentas" style={{width:'91px', height:'auto'}}/>
+          </div>
         </div>
-        <div className="image"></div>
-        <div className="row container-bottom">
+        <div className="container-fluid container-bottom text-center">
           <CurrentLoans />
           <SuggestedLoans />
         </div>
@@ -38,6 +40,14 @@ let bgImg = '/modules/core/client/img/backgrounds/stars.jpg'
 const mainContainer = {
   backgroundImage: `url(${bgImg})`,
   backgroundSize: 'cover',
+  height: '100%'
+}
+
+const titleStyle = {
+  color: '#FFF',
+  marginTop: '38px',
+  marginBottom: '31px',
+  fontWeight: '200'
 }
 
 
