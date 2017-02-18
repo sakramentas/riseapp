@@ -11,18 +11,35 @@ class CurrentLoans extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row text-center">
-          <span className="col-sm-12">Current Loans</span>
-          <div className="row">
-            <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" className="col-sm-4" />
-            <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" className="col-sm-4" />
-            <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" className="col-sm-4" />
+      <div className="container-fluid" style={ mainContainer }>
+        <div className="container text-center">
+          <span className="text-center" style={{marginBottom: '5px'}}>Current Loans</span>
+          <div className="row" style={{ padding: '14px'}}>
+            <div className="col-xs-4">
+              <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" />
+            </div>
+            <div className="col-xs-4" >
+              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
+            </div>
+            <div className="col-xs-4">
+              <Circle percent="70" strokeWidth="4" strokeColor="#0299E3" />
+            </div>
           </div>
         </div>
       </div>
     )
   }
 }
+
+const mainContainer = {
+  background: 'white',
+  borderRadius: '4px',
+  padding: '4px 9px'
+}
+
+// const eachLoan = {
+//   width: '30%',
+//   float: 'left'
+// }
 
 export default CurrentLoans
