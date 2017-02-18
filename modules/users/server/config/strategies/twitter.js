@@ -31,7 +31,6 @@ module.exports = function (config) {
         firstName: firstName,
         lastName: lastName,
         displayName: displayName,
-        username: profile.username,
         profileImageURL: profile.photos[0].value.replace('normal', 'bigger'),
         provider: 'twitter',
         providerIdentifierField: 'id_str',
