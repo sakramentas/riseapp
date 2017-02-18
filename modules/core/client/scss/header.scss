@@ -1,0 +1,40 @@
+
+.headerWrap {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  > img {
+
+   }
+  .headerDark {
+
+  }
+}
+
+
+.headerCon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10% 0 0 0;
+  text-align: center;
+  .headerLogo {
+    display: inline-block;
+    width: 150px;
+  }
+  .headerTitle h1{
+    padding: 0;
+    font-family: 'zona_probold', Helvetica, sans-serif;
+    color: #fff;
+    font-size: 80px;
+  }
+  .headerText{
+    p {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+
+}
