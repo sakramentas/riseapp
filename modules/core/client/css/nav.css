@@ -5,15 +5,12 @@
   width: 50px;
   margin-top: -20px; }
 
-.nav .open > a:hover, .nav .open > a:focus {
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background: transparent;
   border-color: transparent; }
 
 .navbar-nav > li {
   padding: 0 10px; }
-  .navbar-nav > li.open a:focus {
-    background: transparent !important;
-    border: none !important; }
   .navbar-nav > li a {
     padding: 7px;
     font-weight: 200;
