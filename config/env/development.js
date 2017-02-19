@@ -65,8 +65,9 @@ module.exports = {
       }
     }
   },
-  bluebank: {
-    key: 'e6fa826a9946437e9f213997dfffeaaa'
+  bankAPI: {
+    key: '6d1bd9471a8d4b0c8a0dbe734e9a89d2',
+    bearer:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcklkIjoiNThhNjAwMzkyM2NjYjlkMDIyMDY1NDUyIiwicm9sZSI6InVzZXIiLCJwcmltYXJ5U3Vic2NyaWJlcktleSI6IjZkMWJkOTQ3MWE4ZDRiMGM4YTBkYmU3MzRlOWE4OWQyIiwiaWF0IjoxNDg3NDI1NzEyfQ.6647KlQC62KbJMhgeXB1hIcs-YISpRiIFtB4tbQAHE0'
   },
   livereload: true,
   seedDB: process.env.MONGO_SEED || false
