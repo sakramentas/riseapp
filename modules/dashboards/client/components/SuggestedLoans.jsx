@@ -1,5 +1,10 @@
 import React from 'react';
 import {Circle} from 'rc-progress';
+import {
+  Grid,
+  Col,
+  Row,
+} from 'react-bootstrap';
 
 // const singleTransaction = () => {
 //   return() (
@@ -21,75 +26,58 @@ class SuggestedLoans extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid" style={ mainContainer }>
-        <span style={{marginBottom: '5px'}}>Suggested Loans</span>
-        <div className="latestLoans">
-          <div className="container-fluid" style={{borderBottom: '1px #dedbdb solid'}}>
-            <div className="col-xs-9 text-left">
-              <h4>$300</h4>
-              <span>Megan</span>
+      <Grid className="core-card">
+        <Row className="container-fluid">
+          <Col xs={12} className="core-card-title"> Suggested Loans</Col>
+          <Col xs={12}>
+            <div className="latestLoans">
+              <div className="container">
+                <Col xs={9} className="text-left">
+                  <h4>$300</h4>
+                  <span>Megan</span>
+                </Col>
+                <Col xs={3} className="ratingContainer">
+                  <Circle percent="40" strokeWidth="4" strokeColor="#0299E3"/>
+                </Col>
+              </div>
             </div>
-            <div className="col-xs-3">
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
+            <div className="latestLoans">
+              <div className="container">
+                <Col xs={9} className="text-left">
+                  <h4>$300</h4>
+                  <span>Megan</span>
+                </Col>
+                <Col xs={3} className="ratingContainer">
+                  <Circle percent="40" strokeWidth="4" strokeColor="#0299E3"/>
+                </Col>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="latestLoans">
-          <div className="container-fluid" style={{borderBottom: '1px #dedbdb solid'}}>
-            <div className="col-xs-9 text-left">
-              <h4>$300</h4>
-              <span>Megan</span>
+            <div className="latestLoans">
+              <div className="container">
+                <Col xs={9} className="text-left">
+                  <h4>$300</h4>
+                  <span>Megan</span>
+                </Col>
+                <Col xs={3} className="ratingContainer">
+                  <Circle percent="40" strokeWidth="4" strokeColor="#0299E3"/>
+                </Col>
+              </div>
             </div>
-            <div className="col-xs-3">
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-          </div>
-        </div>
-        <div className="latestLoans">
-          <div className="container-fluid" style={{borderBottom: '1px #dedbdb solid'}}>
-            <div className="col-xs-9 text-left">
-              <h4>$300</h4>
-              <span>Megan</span>
-            </div>
-            <div className="col-xs-3">
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-          </div>
-        </div>
-        <div className="latestLoans">
-          <div className="container-fluid" style={{borderBottom: '1px #dedbdb solid'}}>
-            <div className="col-xs-9 text-left">
-              <h4>$300</h4>
-              <span>Megan</span>
-            </div>
-            <div className="col-xs-3">
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-          </div>
-        </div>
-        <div className="latestLoans">
-          <div className="container-fluid" style={{borderBottom: '1px #dedbdb solid'}}>
-            <div className="col-xs-9 text-left">
-              <h4>$300</h4>
-              <span>Megan</span>
-            </div>
-            <div className="col-xs-3">
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Grid>
+
     )
   }
 }
 
-const mainContainer = {
-  background: 'white',
-  borderRadius: '4px',
-  marginTop: '10px',
-  marginBottom: '10px',
-  padding: '4px 9px'
-}
+// const mainContainer = {
+//   background: 'white',
+//   borderRadius: '4px',
+//   marginTop: '10px',
+//   marginBottom: '10px',
+//   padding: '4px 9px'
+// }
 
 // const eachLoan = {
 //   width: '30%',
