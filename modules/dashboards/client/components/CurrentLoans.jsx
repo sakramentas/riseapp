@@ -16,13 +16,13 @@ class CurrentLoans extends React.Component {
           <span className="text-center" style={{marginBottom: '5px'}}>Current Loans</span>
           <div className="row" style={{ padding: '14px'}}>
             <div className="col-xs-4">
-              <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" />
+              <Circle percent="10" strokeWidth="8" strokeColor="#0299E3" />
             </div>
             <div className="col-xs-4" >
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
+              <Circle percent="40" strokeWidth="8" strokeColor="#0299E3" />
             </div>
             <div className="col-xs-4">
-              <Circle percent="70" strokeWidth="4" strokeColor="#0299E3" />
+              <Circle percent="70" strokeWidth="8" strokeColor="#0299E3" />
             </div>
           </div>
         </div>
