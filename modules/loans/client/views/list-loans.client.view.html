@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Loans</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="loan in vm.loans"
+       ui-sref="loans.view({ loanId: loan._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="loan.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="loan.user" ng-bind="loan.user.displayName"></span>
+        <span ng-if="!loan.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="loan.title"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.loans.$resolved && !vm.loans.length">
+    No Loans yet, why don't you <a ui-sref="loans.create">create one</a>?
+  </div>
+</section>
