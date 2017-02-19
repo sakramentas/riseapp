@@ -7,4 +7,54 @@
   width: 100%;
   height: 100%; }
 
-/*# sourceMappingURL=content.css.map */
+.core-card {
+  background: #FFF;
+  border-radius: 4px;
+  padding: 4px 9px;
+  margin-bottom: 10px; }
+
+.core-card-title {
+  color: #0299E3;
+  text-transform: uppercase;
+  font-size: 11px;
+  border-bottom: 1px #efefef solid;
+  padding: 4px 0; }
+
+.avatar-image {
+  width: 91px;
+  height: 91px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto; }
+
+.latestLoans:not(:last-child) > div {
+  border-bottom: 1px #dedbdb solid; }
+.latestLoans > div {
+  height: 71px; }
+  .latestLoans > div .ratingContainer {
+    margin-top: 10px;
+    position: relative; }
+    .latestLoans > div .ratingContainer span {
+      font-size: 23px;
+      position: absolute;
+      top: 13px;
+      left: 45%;
+      color: #8bc34a; }
+
+.current-loans-progress {
+  padding: 8px 0;
+  box-sizing: border-box; }
+  .current-loans-progress .progressContainer {
+    position: relative; }
+    .current-loans-progress .progressContainer span {
+      font-size: 19px;
+      position: absolute;
+      top: 22px;
+      left: 37%;
+      color: #0299E3; }
+  .current-loans-progress .rc-progress-circle {
+    width: 7rem; }
+
+.container-bottom {
+  padding-left: 5px;
+  padding-right: 5px; }
