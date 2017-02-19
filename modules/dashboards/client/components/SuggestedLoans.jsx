@@ -37,7 +37,8 @@ class SuggestedLoans extends React.Component {
                   <span>Megan</span>
                 </Col>
                 <Col xs={3} className="ratingContainer">
-                  <Circle percent="40" strokeWidth="4" strokeColor="#0299E3"/>
+                  <Circle percent="70" strokeWidth="5" trailWidth="5" strokeColor="#8bc34a"/>
+                  <span>7</span>
                 </Col>
               </div>
             </div>
@@ -48,7 +49,8 @@ class SuggestedLoans extends React.Component {
                   <span>Megan</span>
                 </Col>
                 <Col xs={3} className="ratingContainer">
-                  <Circle percent="40" strokeWidth="4" strokeColor="#0299E3"/>
+                  <Circle percent="40" strokeWidth="5" trailWidth="5" strokeColor="#ff9800"/>
+                  <span>4</span>
                 </Col>
               </div>
             </div>
@@ -59,7 +61,8 @@ class SuggestedLoans extends React.Component {
                   <span>Megan</span>
                 </Col>
                 <Col xs={3} className="ratingContainer">
-                  <Circle percent="40" strokeWidth="4" strokeColor="#0299E3"/>
+                  <Circle percent="40" strokeWidth="5" trailWidth="5" strokeColor="#0299E3"/>
+                  <span>4</span>
                 </Col>
               </div>
             </div>

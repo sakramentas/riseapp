@@ -14,16 +14,25 @@
   background: #FFF;
   border-radius: 4px;
   padding: 4px 9px;
+  margin-bottom: 10px;
 }
 
 .core-card-title {
   color: #0299E3;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   border-bottom: 1px #efefef solid;
+  padding: 4px 0;
 }
 
-
+//Timeline
+.avatar-image {
+  width: 91px;
+  height: 91px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+}
 
 // Suggested Loans
 .latestLoans {
@@ -36,6 +45,39 @@
     height: 71px;
     .ratingContainer {
       margin-top: 10px;
+      position: relative;
+      span {
+        font-size: 23px;
+        position: absolute;
+        top: 13px;
+        left: 45%;
+        color: #8bc34a;
+      }
     }
   }
+}
+
+//Current Loans
+.current-loans-progress {
+  padding: 8px 0;
+  box-sizing: border-box;
+  .progressContainer {
+    position: relative;
+    span {
+      font-size: 19px;
+      position: absolute;
+      top: 22px;
+      left: 37%;
+      color: #0299E3;
+    }
+  }
+  .rc-progress-circle {
+    width: 7rem;
+  }
+}
+
+//Containers
+.container-bottom {
+  padding-left: 5px;
+  padding-right: 5px;
 }
