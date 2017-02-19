@@ -1,5 +1,11 @@
 import React from 'react';
 import {Circle} from 'rc-progress';
+import {
+  Grid,
+  Col,
+  Row,
+} from 'react-bootstrap';
+
 
 class CurrentLoans extends React.Component {
   // constructor(props) {
@@ -11,31 +17,32 @@ class CurrentLoans extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid" style={ mainContainer }>
-        <div className="container text-center">
-          <span className="text-center" style={{marginBottom: '5px'}}>Current Loans</span>
-          <div className="row" style={{ padding: '14px'}}>
-            <div className="col-xs-4">
-              <Circle percent="10" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-            <div className="col-xs-4" >
-              <Circle percent="40" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-            <div className="col-xs-4">
-              <Circle percent="70" strokeWidth="4" strokeColor="#0299E3" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Grid className="core-card">
+        <Row className="container-fluid">
+          <Col xs={12} className="core-card-title"> Current Loans</Col>
+          <Col xs={12} className="current-loans-progress">
+            <Row>
+              <Col xs={4} className="progressContainer">
+                <Circle percent="28" strokeWidth="5" trailWidth="5" strokeColor="#0299E3" />
+                <span>28%</span>
+              </Col>
+              <Col xs={4} className="progressContainer">
+                <Circle percent="18" strokeWidth="5" trailWidth="5" strokeColor="#0299E3" />
+                <span>18%</span>
+              </Col>
+              <Col xs={4} className="progressContainer">
+                <Circle percent="18" strokeWidth="5" trailWidth="5" strokeColor="#0299E3" />
+                <span>18%</span>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Grid>
+
     )
   }
 }
 
-const mainContainer = {
-  background: 'white',
-  borderRadius: '4px',
-  padding: '4px 9px'
-}
 
 // const eachLoan = {
 //   width: '30%',
