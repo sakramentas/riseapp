@@ -101,7 +101,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           sourceMap: true,
-           transform: [['babelify', {presets: ['es2015', 'react']}]]
+           transform: [['babelify', {presets: ['stage-0', 'es2015', 'react']}]]
         },
         src: defaultAssets.client.react,
         dest: 'modules/core/client/compiled.react.js',

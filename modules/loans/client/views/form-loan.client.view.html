@@ -1,0 +1,37 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.loan._id ? 'Edit Loan' : 'New Loan'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.loanForm" class="form-horizontal" ng-submit="vm.save(vm.form.loanForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Name</label>
+          <input name="title" type="text" ng-model="vm.loan.title" id="title" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.loanForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Loan name is required.</p>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Name</label>
+          <input name="title" type="text" ng-model="vm.loan.title" id="title" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.loanForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Loan name is required.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea name="content" ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.loan._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
