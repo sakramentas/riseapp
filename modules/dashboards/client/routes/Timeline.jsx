@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import CurrentLoans from '../components/CurrentLoans.jsx'
 import SuggestedLoans from '../components/SuggestedLoans.jsx'
+import { Button } from 'react-bootstrap';
 
 
 class Timeline extends React.Component {
@@ -26,9 +27,10 @@ class Timeline extends React.Component {
           </div>
         </div>
         <div className="container-fluid container-bottom text-center">
-          <CurrentLoans />
+          <CurrentLoans style={{marginBottom: '10px'}}/>
           <SuggestedLoans />
         </div>
+        <Button bsStyle="success">Success</Button>
       </div>
     )
   }
@@ -40,7 +42,8 @@ let bgImg = '/modules/core/client/img/backgrounds/stars.jpg'
 const mainContainer = {
   backgroundImage: `url(${bgImg})`,
   backgroundSize: 'cover',
-  height: '100%'
+  height: '100%',
+  fontFamily: 'Avenir-Book'
 }
 
 const titleStyle = {
