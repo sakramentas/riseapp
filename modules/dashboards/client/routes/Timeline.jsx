@@ -51,6 +51,4 @@ const titleStyle = {
 }
 
 
-ReactDOM.render(<Timeline />, document.getElementById('react-test'))
-
 export default Timeline
