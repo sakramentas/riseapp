@@ -7,6 +7,8 @@ var _ = require('lodash'),
   defaultAssets = require('./config/assets/default'),
   testAssets = require('./config/assets/test'),
   gulp = require('gulp'),
+  react = require('gulp-react'),
+  babel = require('gulp-babel'),
   gulpLoadPlugins = require('gulp-load-plugins'),
   runSequence = require('run-sequence'),
   plugins = gulpLoadPlugins({
@@ -156,6 +158,26 @@ gulp.task('templatecache', function () {
     }))
     .pipe(gulp.dest('build'));
 });
+
+//Babel task
+gulp.task('transform', function () {
+  return gulp.src(defaultAssets.client.react)
+    .pipe(react({
+      harmony: false,
+      es6module: true
+    }))
+    .pipe(gulp.dest('modules/core/client/compiled.react.js'))
+});
+
+//React task
+gulp.task('es6', ['transform'], function () {
+  return gulp.src('modules/core/client/compiled.react.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('modules/core/client/compiled.react.js'))
+});
+
 
 // Mocha tests task
 gulp.task('mocha', function (done) {
