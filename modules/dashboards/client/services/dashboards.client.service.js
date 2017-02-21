@@ -9,7 +9,7 @@
   DashboardsService.$inject = ['$resource'];
 
   function DashboardsService($resource) {
-    return $resource('api/dashboards/:dashboardId', {
+    return $resource('dashboards/:dashboardId', {
       dashboardId: '@_id'
     }, {
       update: {
