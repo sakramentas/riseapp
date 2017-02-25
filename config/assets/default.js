@@ -38,7 +38,8 @@ module.exports = {
     ],
     react: ['modules/*/client/jsx/**/*.js', 'modules/*/client/**/*.jsx'],
     views: ['modules/*/client/views/**/*.html'],
-    templates: ['build/templates.js', 'modules/*/client/**/*.js']
+    templates: ['build/templates.js', 'modules/*/client/**/*.js'],
+    all: 'modules/dashboards/all.js'
   },
   server: {
     gruntConfig: 'gruntfile.js',
