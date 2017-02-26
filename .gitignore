@@ -23,6 +23,7 @@ uploads
 modules/users/client/img/profile/uploads
 config/env/local.js
 modules/core/client/compiled.react.js
+modules/core/client/bundle.js
 *.pem
 
 # Ignoring MEAN.JS's gh-pages branch for documenation

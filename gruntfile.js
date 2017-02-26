@@ -51,13 +51,13 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
-      clientJSX: {
-        files: defaultAssets.client.react,
-        tasks: ['webpack'],
-        options: {
-          livereload: false
-        }
-      },
+      // clientJSX: {
+      //   files: defaultAssets.client.react,
+      //   tasks: ['browserify'],
+      //   options: {
+      //     livereload: false
+      //   }
+      // },
       clientCSS: {
         files: defaultAssets.client.css,
         tasks: ['csslint'],
@@ -97,64 +97,16 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       }
     },
-    browserify: {
-      dist: {
-        options: {
-          sourceMap: true,
-          transform: [['babelify', {presets: ['stage-0', 'es2015', 'react']}]]
-        },
-        src: defaultAssets.client.react,
-        dest: 'modules/core/client/compiled.react.js',
-      }
-    },
-    webpack: {
-      someName: {
-        // webpack options
-        entry: defaultAssets.client.react,
-        output: {
-          path: 'modules/core/client/',
-          filename: "compiled.react.js",
-        },
-        loader:
-          {
-            test: /\.jsx?/,
-            include: defaultAssets.client.react,
-            loaders: ['stage-0', 'es2015', 'react'],
-            reasons: true
-          },
-        stats: {
-          // Configure the console output
-          colors: false,
-          modules: true,
-        },
-        // stats: false disables the stats output
-
-        storeStatsTo: "xyz", // writes the status to a variable named xyz
-        // you may use it later in grunt i.e. <%= xyz.hash %>
-
-        progress: false, // Don't show progress
-        // Defaults to true
-
-        failOnError: false, // don't report error to grunt if webpack find errors
-        // Use this if webpack errors are tolerable and grunt should continue
-
-        watch: true, // use webpacks watcher
-        // You need to keep the grunt process alive
-
-        watchOptions: {
-          aggregateTimeout: 500,
-          poll: true
-        },
-        // Use this when you need to fallback to poll based watching (webpack 1.9.1+ only)
-
-        keepalive: true, // don't finish the grunt task
-        // defaults to true for watch and dev-server otherwise false
-
-        inline: true,  // embed the webpack-dev-server runtime into the bundle
-        // Defaults to false
-
-      }
-    },
+    // browserify: {
+    //   dist: {
+    //     options: {
+    //       sourceMap: true,
+    //        transform: [['babelify', {presets: ['es2015', 'react']}]]
+    //     },
+    //     src: defaultAssets.client.react,
+    //     dest: 'modules/core/client/compiled.react.js',
+    //   }
+    // },
     jshint: {
       all: {
         src: _.union(defaultAssets.server.gruntConfig, defaultAssets.server.allJS, defaultAssets.client.js, testAssets.tests.server, testAssets.tests.client, testAssets.tests.e2e),
@@ -164,7 +116,8 @@ module.exports = function (grunt) {
           mocha: true,
           jasmine: true,
           "ignores": [
-            "modules/core/client/compiled.react.js"
+            "modules/core/client/compiled.react.js",
+            "modules/core/client/bundle.js"
           ],
         }
       }
@@ -210,7 +163,7 @@ module.exports = function (grunt) {
           rename: function (base, src) {
             return src.replace('/scss/', '/css/');
           }
-        }]
+				}]
       }
     },
     less: {
@@ -222,7 +175,7 @@ module.exports = function (grunt) {
           rename: function (base, src) {
             return src.replace('/less/', '/css/');
           }
-        }]
+				}]
       }
     },
     'node-inspector': {
@@ -252,7 +205,7 @@ module.exports = function (grunt) {
           coverage: true,
           require: 'test.js',
           coverageFolder: 'coverage',
-          reportFormats: ['cobertura', 'lcovonly'],
+          reportFormats: ['cobertura','lcovonly'],
           check: {
             lines: 40,
             statements: 40
@@ -288,8 +241,8 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.event.on('coverage', function (lcovFileContents, done) {
-    require('coveralls').handleInput(lcovFileContents, function (err) {
+  grunt.event.on('coverage', function(lcovFileContents, done) {
+    require('coveralls').handleInput(lcovFileContents, function(err) {
       if (err) {
         return done(err);
       }

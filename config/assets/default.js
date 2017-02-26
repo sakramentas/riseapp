@@ -34,12 +34,12 @@ module.exports = {
       'modules/core/client/app/init.js',
       'modules/*/client/*.js',
       'modules/core/client/compiled.react.js',
+      'modules/core/client/bundle.js',
       'modules/*/client/**/*.js'
     ],
     react: ['modules/*/client/jsx/**/*.js', 'modules/*/client/**/*.jsx'],
     views: ['modules/*/client/views/**/*.html'],
     templates: ['build/templates.js', 'modules/*/client/**/*.js'],
-    all: 'modules/dashboards/all.js'
   },
   server: {
     gruntConfig: 'gruntfile.js',

@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <Router history={browserHistory}>
         <Route path='/request' component={RequestLoan} />
-        <Route path='dashboards/timeline' component={Timeline} />
+        <Route path='/timeline' component={Timeline} />
         <Route path='/accept' component={AcceptLoan} />
       </Router>
     )
