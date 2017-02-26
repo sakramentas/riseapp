@@ -51,13 +51,13 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
-      clientJSX: {
-        files: defaultAssets.client.react,
-        tasks: ['browserify'],
-        options: {
-          livereload: false
-        }
-      },
+      // clientJSX: {
+      //   files: defaultAssets.client.react,
+      //   tasks: ['browserify'],
+      //   options: {
+      //     livereload: false
+      //   }
+      // },
       clientCSS: {
         files: defaultAssets.client.css,
         tasks: ['csslint'],
@@ -97,16 +97,16 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       }
     },
-    browserify: {
-      dist: {
-        options: {
-          sourceMap: true,
-           transform: [['babelify', {presets: ['stage-0', 'es2015', 'react']}]]
-        },
-        src: defaultAssets.client.react,
-        dest: 'modules/core/client/compiled.react.js',
-      }
-    },
+    // browserify: {
+    //   dist: {
+    //     options: {
+    //       sourceMap: true,
+    //        transform: [['babelify', {presets: ['es2015', 'react']}]]
+    //     },
+    //     src: defaultAssets.client.react,
+    //     dest: 'modules/core/client/compiled.react.js',
+    //   }
+    // },
     jshint: {
       all: {
         src: _.union(defaultAssets.server.gruntConfig, defaultAssets.server.allJS, defaultAssets.client.js, testAssets.tests.server, testAssets.tests.client, testAssets.tests.e2e),
@@ -116,7 +116,8 @@ module.exports = function (grunt) {
           mocha: true,
           jasmine: true,
           "ignores": [
-            "modules/core/client/compiled.react.js"
+            "modules/core/client/compiled.react.js",
+            "modules/core/client/bundle.js"
           ],
         }
       }

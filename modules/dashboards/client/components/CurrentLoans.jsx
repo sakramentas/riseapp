@@ -8,12 +8,12 @@ import {
 
 
 class CurrentLoans extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   State = {
-  //     loans: props.user.openedloans,
-  //   }
-  // }
+  constructor(props) {
+    super(props)
+    // State = {
+    //   // loans: props.user.openedloans,
+    // }
+  }
 
   render() {
     return (
